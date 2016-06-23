@@ -1,0 +1,52 @@
+body {
+    background-image: url('background.jpg');
+    color: #fff;
+    font: 20px Verdana;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+#game_board{
+    width:540px;
+    height:540px;
+    padding:24px;
+    margin:0 auto;
+}
+#game_board > div{
+    background: url(ball.png) no-repeat;
+    background-position: center;
+    background-size: 100%;
+    border:#000 1px solid;
+    width:71px;
+    height:71px;
+    float:left;
+    margin:10px;
+    padding:20px;
+    font-size:64px;
+    cursor:pointer;
+    text-align:center;
+}
+
+#gameButtons, #desc {
+    display: block;
+    margin: 20px;
+    text-align: center;
+}
+
+#gameButtons .button, #desc .button {
+    cursor: default;
+    background: #11aaff;
+    border-radius: 10px;
+    /*cursor: pointer;*/
+    padding: 5px 10px;
+    margin: 5px;
+}
+#gameButtons .btn-start{
+    cursor: pointer;
+}
+
+
+#gameButtons .button:hover, #desc .button:hover {
+    background: #0055ff;
+}
+

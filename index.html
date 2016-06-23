@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="index.js"></script>
+</head>
+<body>
+
+<div id="counter">
+    <span id="gameButtons">
+
+        <span class="button">
+            <span id="count" onclick="onClick();"><a id="count-click">0</a></span> Moves
+        </span>
+
+
+         <span class="button btn-start" id="startAgain">
+            <a onclick="newBoard();">Start again</a>
+        </span>
+
+
+        <span class="button">
+            <span id="round" onclick="onRound();"><a id="round-click">0</a></span> Round
+        </span>
+    </span>
+
+</div>
+<div id="game_board">
+
+
+</div>
+
+
+<script>newBoard();</script>
+
+</body>
+</html>
