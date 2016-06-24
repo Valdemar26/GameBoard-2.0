@@ -3,8 +3,8 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Game</title>
-    <link rel="stylesheet" href="style.css"/>
-    <script src="index.js"></script>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/index.js"></script>
 </head>
 <body>
 
@@ -12,26 +12,56 @@
     <span id="gameButtons">
 
         <span class="button">
-            <span id="count" onclick="onClick();"><a id="count-click">0</a></span> Moves
+            <span id="round" onclick="onRound();"><a id="round-click">0</a></span> Round
         </span>
-
 
          <span class="button btn-start" id="startAgain">
             <a onclick="newBoard();">Start again</a>
         </span>
 
-
-        <span class="button">
-            <span id="round" onclick="onRound();"><a id="round-click">0</a></span> Round
+        <span>
+            <span id="rules_btn"></span>
         </span>
+
     </span>
 
 </div>
 <div id="game_board">
 
-
 </div>
 
+<div id="rules">
+    <!-- Trigger/Open The Modal -->
+    <!-- <button id="myBtn">Read Game Rules</button>-->
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">x</span>
+                <h2>Game Rules</h2>
+            </div>
+            <div class="modal-body">
+                <p>The gameplay is the sequence of rounds.</p>
+                <p>In each round you should select 2 tiles with the same color to make them disappear.</p>
+                <p>If you selects 2 tiles with different colors then they are flipped to "closed" state, and you proceeds with the next round.</p>
+                <p>The game is considered to be over when all of the tiles are opened.</p>
+            </div>
+            <div class="modal-footer">
+                <h3></h3>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script src="https://fb.me/react-0.14.7.js"></script>
+<script src="https://fb.me/react-dom-0.14.7.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+<script type="text/jsx" src="js/script.jsx"></script>
 
 <script>newBoard();</script>
 

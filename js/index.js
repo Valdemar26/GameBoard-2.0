@@ -24,7 +24,6 @@ Array.prototype.color_tile_shuffle = function(){
 };
 
 function newBoard(){
-    document.getElementById("count-click").innerHTML = 0;
     document.getElementById("round-click").innerHTML = 0;
     tiles_flipped = 0;
     var output = '';
@@ -36,15 +35,11 @@ function newBoard(){
     document.getElementById('game_board').innerHTML = output;
 }
 
-// Counter for clicks and rounds
+// Counter for rounds
 var clicks = 0;
-function onClick() {
-    clicks += 1;
-    document.getElementById("count-click").innerHTML = clicks;
-}
-
 var round = 0;
 function onRound() {
+    clicks += 1;
     round = Math.floor(clicks/2);
     document.getElementById("round-click").innerHTML = round;
 }
@@ -59,7 +54,6 @@ function clearBothArrays(){
 
 
 function colorFlipTile(tile,val){
-    onClick();
     onRound();
     if(tile.innerHTML == "" && colors_values.length < 2){
         tile.style.background = '#fff';
@@ -85,11 +79,11 @@ function colorFlipTile(tile,val){
                     // Flip the 2 tiles back over
                     var tile_1 = document.getElementById(color_tile_ids[0]);
                     var tile_2 = document.getElementById(color_tile_ids[1]);
-                    tile_1.style.background = 'url(ball.png) no-repeat';
+                    tile_1.style.background = 'url(img/ball.png) no-repeat';
                     tile_1.style.backgroundPosition = "center";
                     tile_1.style.backgroundSize = "100%";
                     tile_1.innerHTML = "";
-                    tile_2.style.background = 'url(ball.png) no-repeat';
+                    tile_2.style.background = 'url(img/ball.png) no-repeat';
                     tile_2.style.backgroundPosition = "center";
                     tile_2.style.backgroundSize = "100%";
                     tile_2.innerHTML = "";
@@ -101,3 +95,4 @@ function colorFlipTile(tile,val){
         }
     }
 }
+
